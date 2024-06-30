@@ -7,13 +7,13 @@ const elenco_emails = [
 ];
 
 //Inserisco la variabile di controllo, detta flag
-const btn = document.getElementById("search").value.toLowerCase();
+const btn = document.getElementById("search");
 let found_email = false;
 
 btn.addEventListener("click", function () {
 
     //Recupero il valor inserito nel campo input
-    let word = document.getElementById("e-mail_box").value;
+    let word = document.getElementById("e-mail_box").value.toLowerCase();
    
     //Mi assicuro che l'elenco delle e-mails scritte sopra siano associato ad un valore true affinché il bottone search le trovi
     for (let i = 0; i < elenco_emails.length; i++) {
@@ -23,9 +23,11 @@ btn.addEventListener("click", function () {
     }
 
     if (found_email === true) {
-        console.log("La tua e_mail è presente nel nostro database")
+        document.getElementById("response").innerText = "La tua e_mail è presente nel nostro database"
+        //La tua e_mail è presente nel nostro database
     }
     else {
-        console.log("Spiacente, la tua e-mail non è presente nel nostro database")
+        document.getElementById("response").innerText = "Spiacente, la tua e-mail non è presente nel nostro database"
+        //Spiacente, la tua e-mail non è presente nel nostro database
     }
 })
