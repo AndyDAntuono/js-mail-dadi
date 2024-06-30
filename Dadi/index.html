@@ -9,6 +9,12 @@
 </head>
 <body>
     <div class="container">
+        <!--Inserico il div che conterrà un bottonE che lancerà i dadi-->
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-sm btn-primary" id="rollThatDice">Let's roll!</button>
+            </div>
+        </div>
         <div class="row">
             <!--Inserisco i div che conterrano i "dadi" del giocatore umano e della cpu in due due colonne separate-->
             <div class="col-6">
@@ -18,15 +24,10 @@
                 <div class="cpu_dice">CPU</div>
             </div>
         </div>
-        <!--Inserico il div che conterrà un bottono che lancerà i dadi-->
-        <div class="row">
-            <div class="col-12">
-                <button class="btn btn-sm btn-primary" id="rollThatDice">Let's roll!</button>
-            </div>
-        </div>
         <!--Inserico il div che annuncerà il vincitore in una riga separata rispetto a quella che contiene i dadi-->
         <div class="row">
             <div class="col-12">
+                <h1>Risultato:</h1>
                 <div class="result"></div>
             </div>
         </div>
