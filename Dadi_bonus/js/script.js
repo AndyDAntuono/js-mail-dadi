@@ -1,13 +1,13 @@
 //Creo una funzione in cui inserisco due variabili che generano dei numeri randomici (che avranno un valore minimo di 1 fin ad un valore massimo di 6) che rappresento il lancio dei dadi
-const btn = document.getElementById("rollThatDice")
+const btn = document.getElementById("roll_dices")
 
 btn.addEventListener("click", function () {
-    let randomNumber1 = ((Math.random() * 6) + 1);
+    let randomNumber1 = Math.floor(Math.random() * 6 + 1);
     document.getElementById("user_dice").innerHTML = randomNumber1;
 
-    let randomNumber2 = ((Math.random() * 6) + 1);
+    let randomNumber2 = Math.floor(Math.random() * 6 + 1);
     document.getElementById("cpu_dice").innerHTML = randomNumber2;
-
+    console.log(randomNumber1, randomNumber2)
     if (randomNumber1 === randomNumber2) {
         document.getElementById("result").innerText = "PAREGGIO!";
     }

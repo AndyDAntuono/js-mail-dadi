@@ -12,23 +12,25 @@
         <!--Inserico il div che conterrà un bottonE che lancerà i dadi-->
         <div class="row">
             <div class="col-12">
-                <button class="btn btn-sm btn-primary" id="rollThatDice">Let's roll!</button>
+                <button type="button" class="btn btn-sm btn-primary" id="roll_dices">Let's roll!</button>
             </div>
         </div>
         <div class="row">
             <!--Inserisco i div che conterrano i "dadi" del giocatore umano e della cpu in due due colonne separate-->
             <div class="col-6">
-                <div class="user_dice">D'Antony</div>
+                <label>D'Antony</label>
+                <div id="user_dice"></div>
             </div>
             <div class="col-6">
-                <div class="cpu_dice">CPU</div>
+                <label>CPU</label>
+                <div id="cpu_dice"></div>
             </div>
         </div>
         <!--Inserico il div che annuncerà il vincitore in una riga separata rispetto a quella che contiene i dadi-->
         <div class="row">
             <div class="col-12">
                 <h1>Risultato:</h1>
-                <div class="result"></div>
+                <div id="result"></div>
             </div>
         </div>
     </div>
